@@ -9,7 +9,6 @@ set tabstop=4 shiftwidth=4 expandtab
 color darkblue
 nmap <S-h> :bp<CR>
 nmap <S-l> :bn<CR>
-let g:python3_host_prog = '/Python37/python'
 
 call plug#begin('~/AppData/Local/nvim/plugged')
 "
@@ -19,20 +18,9 @@ Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-sensible'
 Plug 'godlygeek/tabular'
 Plug 'itchyny/calendar.vim'
-" On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-let g:deoplete#enable_at_startup = 1
-
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Initialize plugin system
 call plug#end()
 
