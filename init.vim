@@ -6,7 +6,7 @@ set number
 set autochdir
 set spell spelllang=en_us
 set tabstop=4 shiftwidth=4 expandtab
-color darkblue
+color desert
 nmap <S-h> :bp<CR>
 nmap <S-l> :bn<CR>
 
@@ -14,13 +14,14 @@ call plug#begin('~/AppData/Local/nvim/plugged')
 "
 " Make sure you use single quotes
 "
-Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-sensible'
-Plug 'godlygeek/tabular'
-Plug 'itchyny/calendar.vim'
+Plug 'vimwiki/vimwiki'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'godlygeek/tabular'
+Plug 'itchyny/calendar.vim'
+Plug 'itchyny/lightline.vim'
 " Initialize plugin system
 call plug#end()
 
