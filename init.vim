@@ -7,10 +7,12 @@ set autochdir
 set spell spelllang=en_us
 set tabstop=4 shiftwidth=4 expandtab
 color desert
-nmap <S-h> :bp<CR>
-nmap <S-l> :bn<CR>
+nmap <C-j> :bp<CR>
+nmap <C-k> :bn<CR>
+tnoremap <C-[> <C-\><C-n>
 
 call plug#begin('~/AppData/Local/nvim/plugged')
+" call plug#begin('~/.config/nvim/plugged')
 "
 " Make sure you use single quotes
 "
