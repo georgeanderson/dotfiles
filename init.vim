@@ -6,10 +6,11 @@ set number
 set autochdir
 set spell spelllang=en_us
 set tabstop=4 shiftwidth=4 expandtab
-color desert
 nmap <C-j> :bp<CR>
 nmap <C-k> :bn<CR>
 tnoremap <C-[> <C-\><C-n>
+set splitbelow
+set splitright
 
 call plug#begin('~/AppData/Local/nvim/plugged')
 " call plug#begin('~/.config/nvim/plugged')
@@ -24,13 +25,14 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'godlygeek/tabular'
 Plug 'itchyny/calendar.vim'
 Plug 'itchyny/lightline.vim'
+Plug 'patstockwell/vim-monokai-tasty'
 " Initialize plugin system
 call plug#end()
 
+" Monokai theme
+colorscheme vim-monokai-tasty
 
-" Plugin key-mappings.
 " Nerdtree
-
 map <C-n> :NERDTreeToggle<CR>
 
 " Neosnippet
