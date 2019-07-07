@@ -1,0 +1,186 @@
+
+snippet     bold
+abbr        *text*
+options     head
+    *${1}*${2}
+
+snippet     scratch
+abbr        ~~scratch~~
+options     head
+    ~~${1}~~${2}
+
+snippet     italic
+abbr        _italic_
+options     head
+    _${1}_${2}
+
+snippet     sub
+abbr        ,,sub,,
+options     head
+    ,,${1},,${2}
+
+snippet     upper
+abbr        ^upper^
+options     head
+    ^${1}^${2}
+
+snippet     image_local
+abbr        {{<image path>}}
+options     head
+    {{local:${1:image_path}}}${2}
+
+snippet     image
+abbr        {{<image url>}}
+options     head
+    {{http://${1:image_url}}}${2}
+
+snippet     table
+abbr        table template
+options     head
+  |${1:title}|${2:title}|
+  |---|---|
+  |${3:value}|${4:value}${5:TARGET}|
+
+snippet     definintion
+abbr        definition
+options     head
+  term:: ${1:definintion}
+
+snippet     tag
+abbr        :tag1:tag2:
+options     head
+  :${1:tag}:${3}
+
+snippet     code
+abbr        {{{<code>}}}
+options     head
+  {{{
+  ${0:TARGET}
+  }}}
+
+snippet wiki_now
+abbr    wnow
+alias   wnow
+options head
+	`strftime("%c")`: ${1}
+
+snippet wiki_title
+abbr    wtitle
+alias   wtitle
+options head
+	== `strftime("%c")` ${1} ==
+
+snippet week_retrospective
+abbr    wweek
+alias   wweek
+options head
+	== `strftime("%c")` Accomplishments of the Week ==
+
+	=== Monday ===
+
+	* ${1}
+
+	=== Tuesday ===
+
+	* ${2}
+
+	=== Wednesday ===
+
+	* ${3}
+
+	=== Thursday ===
+
+	* ${4}
+
+	=== Friday ===
+
+	* ${5}
+
+    === Big Wins ===
+
+    * ${6}
+
+    === Big 3 for this week ===
+
+    * ${7}
+
+snippet daily_retrospective
+abbr    wdaily
+alias   wdaily
+options head
+    == `strftime("%c")` ==
+
+    === What have I accomplished today? ===
+
+    * ${1}
+
+    === What is blocking my progress? ===
+
+    * ${2}
+
+    === What am I going to work tomorrow? ===
+
+    * [ ] ${3}
+
+snippet meeting_notes
+abbr    wnotes
+alias   wnotes
+options head
+    == `strftime("%c")`: ${1} ==
+
+    === Agenda ===
+
+    * ${2}
+
+    === Notes ===
+
+    * ${3}
+
+    === Follow-up ===
+
+    * [ ] ${4:Owner}: ${5:description}
+
+snippet daily_journal
+abbr    wjournal
+alias   wjournal
+options head
+    == `strftime("%c")` ==
+
+    === Yesterday ===
+
+    ==== What happened yesterday? ====
+
+    * ${1}
+
+    ==== What were my biggest wins from yesterday? ====
+
+    * ${2}
+
+    ==== What lessons did I learn? ====
+
+    * ${3}
+
+    === Now ===
+
+    ==== What am I thankful for right now? ====
+
+    * ${4}
+
+    ==== How am I feeling right now? ====
+
+    * ${5}
+
+    === Today ===
+
+    ==== What did I read or hear? ====
+
+    * ${6}
+
+    ==== What stood out? ====
+
+    * ${7}
+
+    ==== What can I do next to move forward on my goals? ====
+
+    * ${8}
+
