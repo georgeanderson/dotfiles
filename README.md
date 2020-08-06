@@ -3,5 +3,5 @@
 
 ## Execute Powershell scripts
 ```
-PS Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope CurrentUser
+PS> Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope CurrentUser
 ```
