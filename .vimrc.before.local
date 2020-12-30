@@ -1,3 +1,0 @@
-let g:spf13_leader='\'
-let g:spf13_bundle_groups=['general', 'writing', 'programming', 'python', 'javascript', 'html', 'misc', 'neocomplete']
-

@@ -1,5 +1,0 @@
-colorscheme solarized
-set guioptions=ce
-set wrap
-nmap <S-J> :bp<CR>
-nmap <S-K> :bn<CR>

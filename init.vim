@@ -1,10 +1,6 @@
-filetype plugin on
-syntax on
-set clipboard+=unnamedplus
-set nocompatible
+"set clipboard+=unnamedplus
 set number
 set autochdir
-set spell spelllang=en_us
 set tabstop=4 shiftwidth=4 expandtab
 nmap <C-j> :bp<CR>
 nmap <C-k> :bn<CR>
@@ -19,7 +15,6 @@ call plug#begin('C:\Users\george_anderson\AppData\Local\nvim\plugged')
 "
 Plug 'tpope/vim-sensible'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'itchyny/calendar.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'dkarter/bullets.vim'
@@ -32,7 +27,3 @@ colorscheme vim-monokai-tasty
 " Nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
-" For conceal markers.
-if has('conceal')
-  set conceallevel=2 concealcursor=niv
-endif
