@@ -208,9 +208,7 @@ exec --no-startup-id /usr/bin/setxkbmap -option "ctrl:nocaps"
 bindsym Print exec gnome-screenshot -i 
 #crop-area screenshot by pressing Mod + printscreen
 bindsym $mod+Print exec gnome-screenshot -a
-#
-# Increase brightness
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5 && xbacklight > /home/george/.config/brightness && $refresh_i3status
-# Decrease brightness
-bindsym XF86MonBrighnessDown exec xbacklight -dec 5 && xbacklight > /home/george/.config/brightness && $refresh_i3status
+#screen brightness
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 
