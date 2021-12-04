@@ -201,9 +201,10 @@ bar {
         urgent_workspace #2f343a #900000 #ffffff
     }
 }
-
+#capslock remap
 exec --no-startup-id /usr/bin/setxkbmap -option "ctrl:nocaps"
-
+#lock screen
+bindsym mod4+l exec i3lock
 #interactive screenshot by pressing printscreen
 bindsym Print exec gnome-screenshot -i 
 #crop-area screenshot by pressing Mod + printscreen
