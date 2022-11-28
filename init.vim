@@ -19,12 +19,10 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'itchyny/lightline.vim'
-Plug 'patstockwell/vim-monokai-tasty'
 Plug 'morhetz/gruvbox'
 Plug 'dkarter/bullets.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "
 " Initialize plugin system
 call plug#end()
@@ -38,5 +36,3 @@ map <C-n> :NERDTreeToggle<CR>
 map <C-p> :Files<CR>
 map <C-l> :Lines<CR>
 
-" Deoplete
-let g:deoplete#enable_at_startup = 1
