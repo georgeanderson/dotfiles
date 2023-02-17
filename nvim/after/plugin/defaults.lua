@@ -5,7 +5,6 @@ vim.opt.softtabstop = 2
 vim.opt.expandtab = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.relativenumber = true
---vim.opt.autochdir = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.smartindent = true
@@ -24,8 +23,31 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "<leader>ns", ":let g:netrw_browse_split = 2<CR>")
-vim.keymap.set("n", "<leader>no", ":let g:netrw_browse_split = ''<CR>")
+
+local nmap = function(keys, func, desc)
+  if desc then
+    desc = 'LSP: ' .. desc
+  end
+
+  vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
+end
+
 -- -- Plugin Config
 vim.keymap.set("n", "<leader>fo", ":lua vim.lsp.buf.format()<CR>")
+nmap('<leader>k', vim.lsp.buf.signature_help, 'Signature Documentation')
 
+-- Telescome setup
+local actions = require "telescope.actions"
+require("telescope").setup {
+  pickers = {
+    buffers = {
+      mappings = {
+        i = {
+          ["<C-d>"] = actions.delete_buffer + actions.move_to_top,
+          ["<esc>"] = actions.close,
+          ["<C-u>"] = false
+        }
+      }
+    }
+  }
+}
