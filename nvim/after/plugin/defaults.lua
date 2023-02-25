@@ -24,17 +24,11 @@ vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
-local nmap = function(keys, func, desc)
-  if desc then
-    desc = 'LSP: ' .. desc
-  end
-
-  vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
-end
-
--- -- Plugin Config
+-- Plugin Config
 vim.keymap.set("n", "<leader>fo", ":lua vim.lsp.buf.format()<CR>")
-nmap('<leader>k', vim.lsp.buf.signature_help, 'Signature Documentation')
+
+-- Auto commands
+vim.cmd('autocmd VimResized * wincmd =')
 
 -- Telescome setup
 local actions = require "telescope.actions"
@@ -45,7 +39,6 @@ require("telescope").setup {
         i = {
           ["<C-d>"] = actions.delete_buffer + actions.move_to_top,
           ["<esc>"] = actions.close,
-          ["<C-u>"] = false
         }
       }
     }
