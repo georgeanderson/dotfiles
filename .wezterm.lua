@@ -10,6 +10,9 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
+-- Spawn a fish shell in login mode
+config.default_prog = { '/usr/bin/zsh', '-l' }
+
 -- If set to true, when there is only a single tab, the tab bar is hidden from the display
 config.hide_tab_bar_if_only_one_tab = true
 config.color_scheme = 'Tokyo Night'

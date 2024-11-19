@@ -1,40 +1,42 @@
-theme = "slick"
-icons = "awesome"
+theme = "tokyonight" 
 
-[[block]]
-block = "disk_space"
-path = "/"
-alias = "/"
-info_type = "available"
-unit = "GB"
-interval = 20
-warning = 20.0
-alert = 10.0
+[editor]
+line-number = "relative"
+bufferline = "multiple" 
+text-width = 100
+rulers = [100]
 
-[[block]]
-block = "memory"
-display_type = "memory"
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "file-name"] 
 
-[[block]]
-block = "cpu"
-interval = 1
+[editor.whitespace]
+render = "all"
 
-[[block]]
-block = "load"
-interval = 1
-format = "{1m}"
+[editor.indent-guides]
+render = true 
+character = "⸽"  # Some characters that work well: "▏", "┆", "┊", "⸽" 
+skip-levels = 1 
 
-[[block]]
-block = "backlight"
+[editor.soft-wrap]
+enable = true 
 
-[[block]]
-block = "sound"
+[keys.insert]
+up = "no_op" 
+down = "no_op" 
+left = "no_op"
+right = "no_op"
+pageup = "no_op"
+pagedown = "no_op"
+home = "no_op"
+end = "no_op" 
 
-[[block]]
-block = "battery"
-interval = 10
+[keys.select]
+X = ["extend_line_up", "extend_to_line_bounds"]
+C-k = [ "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before" ]
+C-j = [ "extend_to_line_bounds", "delete_selection", "move_line_down", "paste_before" ]
 
-[[block]]
-block = "time"
-interval = 5
-format = "%a %d/%m %R"
+[keys.normal]
+X = ["extend_line_up", "extend_to_line_bounds"]
+ret = "command_mode"
+C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
