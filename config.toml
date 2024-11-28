@@ -1,4 +1,4 @@
-theme = "tokyonight" 
+theme = "george" 
 
 [editor]
 line-number = "relative"
@@ -31,12 +31,14 @@ home = "no_op"
 end = "no_op" 
 
 [keys.select]
-X = ["extend_line_up", "extend_to_line_bounds"]
+X = ["select_line_above"]
+x = ["select_line_below"]
 C-k = [ "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before" ]
 C-j = [ "extend_to_line_bounds", "delete_selection", "move_line_down", "paste_before" ]
 
 [keys.normal]
-X = ["extend_line_up", "extend_to_line_bounds"]
+X = ["select_line_above"]
+x = ["select_line_below"]
 ret = "command_mode"
 C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
