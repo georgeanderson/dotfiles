@@ -8,9 +8,16 @@ rulers = [100]
 
 [editor.statusline]
 left = ["mode", "spinner", "version-control", "file-name"] 
-
+center = ["diagnostics"]
+right = ["position-percentage", "file-type", "separator", "file-line-ending"]
 [editor.whitespace]
 render = "all"
+
+[editor.whitespace.characters]
+nbsp = "⍽"
+newline = "⤶"
+space = "·"
+tab = "→"
 
 [editor.indent-guides]
 render = true 
@@ -19,6 +26,10 @@ skip-levels = 1
 
 [editor.soft-wrap]
 enable = true 
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
 
 [keys.insert]
 up = "no_op" 
@@ -42,3 +53,8 @@ x = ["select_line_below"]
 ret = "command_mode"
 C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+
+[keys.normal.space]
+t = ":sh zellij run -ci --name gitui -- gitui"
+z = ":sh export EDITOR=hx; zellij run -ci --name yazi -- yazi $(pwd)"
+F = { a = ":toggle file-picker.hidden", F = "file_picker_in_current_directory"}
