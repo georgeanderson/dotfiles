@@ -57,4 +57,5 @@ C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_befor
 [keys.normal.space]
 t = ":sh zellij run -ci --name gitui -- gitui"
 z = ":sh export EDITOR=hx; zellij run -ci --name yazi -- yazi $(pwd)"
+l = ":sh zellij run -ci --name serpl -- serpl"
 F = { a = ":toggle file-picker.hidden", F = "file_picker_in_current_directory"}
