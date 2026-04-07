@@ -114,6 +114,7 @@ install_dotfiles() {
     create_symlink "$DOTFILES_DIR/.config/i3" "$HOME/.config/i3"
     create_symlink "$DOTFILES_DIR/.config/zellij" "$HOME/.config/zellij"
     create_symlink "$DOTFILES_DIR/.config/wezterm/.wezterm.lua" "$HOME/.wezterm.lua"
+    create_symlink "$DOTFILES_DIR/.config/ghostty" "$HOME/.config/ghostty"
     
     # Editor configurations
     create_symlink "$DOTFILES_DIR/editor/nvim/init.lua" "$HOME/.config/nvim/init.lua"

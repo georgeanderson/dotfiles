@@ -17,6 +17,8 @@ dotfiles/
 │   │       └── george.toml      # My custom theme
 │   ├── i3/                      # i3 window manager
 │   │   └── config               # i3 configuration file
+│   ├── ghostty/                 # Ghostty terminal emulator
+│   │   └── config               # Ghostty configuration
 │   ├── zellij/                  # Zellij terminal multiplexer
 │   │   └── config.kdl           # Zellij configuration
 │   └── wezterm/                 # WezTerm terminal emulator
@@ -77,6 +79,11 @@ To see what the installation script would do without making changes:
 - Cross-platform terminal emulator
 - Lua-based configuration
 
+### Terminal Emulator (Ghostty)
+- Fast terminal emulator with native GPU rendering
+- Configurable keybinds for terminal multiplexer navigation
+- Custom theme (Aura)
+
 ### Editor (Helix)
 - Modal editor with built-in LSP support
 - Custom theme (george.toml)
@@ -92,7 +99,7 @@ This repository only contains configuration files. You'll need to install the fo
 
 - **Shell**: zsh, oh-my-zsh
 - **Window Manager**: i3
-- **Terminal**: wezterm, tmux
+- **Terminal**: wezterm, ghostty, tmux
 - **Terminal Multiplexer**: zellij
 - **Editors**: helix, neovim
 - **Other**: keyd (for keyboard daemon)
