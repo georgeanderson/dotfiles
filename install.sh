@@ -120,8 +120,14 @@ install_dotfiles() {
     create_symlink "$DOTFILES_DIR/editor/nvim/init.lua" "$HOME/.config/nvim/init.lua"
     create_symlink "$DOTFILES_DIR/editor/vimwiki/vimwiki.snip" "$HOME/.vim/wiki/vimwiki.snip"
     
+    # Omarchy / Hyprland
+    create_symlink "$DOTFILES_DIR/omarchy/hypr/input.lua" "$HOME/.config/hypr/input.lua"
+    create_symlink "$DOTFILES_DIR/omarchy/hypr/bindings.lua" "$HOME/.config/hypr/bindings.lua"
+    create_symlink "$DOTFILES_DIR/omarchy/shell.json" "$HOME/.config/omarchy/shell.json"
+
     # Make scripts executable
     make_executable "$DOTFILES_DIR/scripts/kbconfig.sh"
+    make_executable "$DOTFILES_DIR/omarchy/install-plugins.sh"
     
     print_success "Dotfiles installation completed!"
 }

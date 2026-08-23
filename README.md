@@ -23,6 +23,13 @@ dotfiles/
 │   │   └── config.kdl           # Zellij configuration
 │   └── wezterm/                 # WezTerm terminal emulator
 │       └── .wezterm.lua         # WezTerm configuration
+├── omarchy/                     # Omarchy / Hyprland customizations
+│   ├── README.md                # Layouts, bindings, bar widgets
+│   ├── install-plugins.sh       # Community + first-party plugins
+│   ├── shell.json               # Bar layout
+│   └── hypr/
+│       ├── input.lua            # Keyboard layouts
+│       └── bindings.lua         # Extra keybindings
 ├── scripts/                     # Utility scripts
 │   ├── kbconfig.sh              # Keyboard layout setup
 │   └── keyd.conf                # Keyd daemon configuration
@@ -66,6 +73,13 @@ To see what the installation script would do without making changes:
 - Plugins: git, colorize, cp, docker, man, tmux, ubuntu, vi-mode
 - Editor preference: `hx` (helix) for local sessions, `vim` for SSH
 
+### Window Manager (Omarchy / Hyprland)
+- Dvorak, Dvorak intl, and US intl layouts (Left Alt + Right Alt)
+- Alt+Tab switcher across workspaces
+- Alt+H / Alt+L cycle grouped windows
+- Bar: active window, media, CPU/RAM (sysmon)
+- After `./install.sh`, run `./omarchy/install-plugins.sh`
+
 ### Window Manager (i3)
 - Default terminal: WezTerm
 - Includes volume controls and startup applications
@@ -98,8 +112,8 @@ To see what the installation script would do without making changes:
 This repository only contains configuration files. You'll need to install the following applications separately:
 
 - **Shell**: zsh, oh-my-zsh
-- **Window Manager**: i3
-- **Terminal**: wezterm, ghostty, tmux
+- **Window Manager**: Omarchy (Hyprland) or i3
+- **Terminal**: wezterm, tmux
 - **Terminal Multiplexer**: zellij
 - **Editors**: helix, neovim
 - **Other**: keyd (for keyboard daemon)
