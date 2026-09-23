@@ -17,12 +17,8 @@ dotfiles/
 │   │       └── george.toml      # My custom theme
 │   ├── i3/                      # i3 window manager
 │   │   └── config               # i3 configuration file
-│   ├── ghostty/                 # Ghostty terminal emulator
-│   │   └── config               # Ghostty configuration
-│   ├── zellij/                  # Zellij terminal multiplexer
-│   │   └── config.kdl           # Zellij configuration
-│   └── wezterm/                 # WezTerm terminal emulator
-│       └── .wezterm.lua         # WezTerm configuration
+│   └── ghostty/                 # Ghostty terminal emulator
+│       └── config               # Ghostty configuration
 ├── omarchy/                     # Omarchy / Hyprland customizations
 │   ├── README.md                # Layouts, bindings, bar widgets
 │   ├── install-plugins.sh       # Community + first-party plugins
@@ -38,8 +34,6 @@ dotfiles/
 ├── terminal/                    # Terminal-specific configs
 │   └── .tmux.conf               # Tmux configuration
 └── editor/                      # Editor configurations
-    ├── nvim/                    # Neovim configuration
-    │   └── init.lua             # Neovim config file
     └── vimwiki/                 # VimWiki configuration
         └── vimwiki.snip         # VimWiki snippets
 ```
@@ -81,17 +75,9 @@ To see what the installation script would do without making changes:
 - After `./install.sh`, run `./omarchy/install-plugins.sh`
 
 ### Window Manager (i3)
-- Default terminal: WezTerm
+- Default terminal: Ghostty
 - Includes volume controls and startup applications
 - Uses DejaVu Sans Mono font
-
-### Terminal Multiplexer (Zellij)
-- Modern terminal multiplexer with tabbed interface
-- Custom theme and layout configuration
-
-### Terminal Emulator (WezTerm)
-- Cross-platform terminal emulator
-- Lua-based configuration
 
 ### Terminal Emulator (Ghostty)
 - Fast terminal emulator with native GPU rendering
@@ -103,19 +89,14 @@ To see what the installation script would do without making changes:
 - Custom theme (george.toml)
 - Language-specific configurations
 
-### Editor (Neovim)
-- Lua-based configuration
-- Minimal setup for specific use cases
-
 ## Dependencies
 
 This repository only contains configuration files. You'll need to install the following applications separately:
 
 - **Shell**: zsh, oh-my-zsh
 - **Window Manager**: Omarchy (Hyprland) or i3
-- **Terminal**: wezterm, tmux
-- **Terminal Multiplexer**: zellij
-- **Editors**: helix, neovim
+- **Terminal**: ghostty, tmux
+- **Editors**: helix
 - **Other**: keyd (for keyboard daemon)
 
 ## Usage
